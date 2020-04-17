@@ -21,13 +21,13 @@ public class OutraActivity extends AppCompatActivity {
         }
     }
 
-    public void btnConfirmar(View view){
+    public void confirmar(View view){
         getIntent().putExtra("USER", editText.getText().toString());
         setResult(200,getIntent());
         finish();
     }
 
-    public void btnCancelar(View view) {
+    public void cancelar(View view) {
         setResult(500, null);
         finish();
     }
