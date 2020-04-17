@@ -200,6 +200,4 @@ public class CorrecaoTest {
         onView(withId(R.id.editText))
                 .check(matches(withText("Beltrano")));
     }
-
-
 }

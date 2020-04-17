@@ -4,14 +4,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class AnotherActivity extends MainActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class OutraActivity extends AppCompatActivity {
 
     private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.another_activity);
+        setContentView(R.layout.activity_outra);
         editText = findViewById(R.id.editText);
 
         if (getIntent().hasExtra("USER")) {
@@ -19,13 +21,13 @@ public class AnotherActivity extends MainActivity {
         }
     }
 
-    public void confirm(View v){
+    public void btnConfirmar(View view){
         getIntent().putExtra("USER", editText.getText().toString());
         setResult(200,getIntent());
         finish();
     }
 
-    public void cancel(View v) {
+    public void btnCancelar(View view) {
         setResult(500, null);
         finish();
     }

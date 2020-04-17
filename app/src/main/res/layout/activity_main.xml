@@ -11,7 +11,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/textView"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -19,11 +20,11 @@
         app:layout_constraintVertical_bias="0.176" />
 
     <Button
-        android:id="@+id/btnChange"
+        android:id="@+id/btnTrocar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="changeUser"
-        android:text="@string/text_btn"
+        android:onClick="trocarUsuario"
+        android:text="@string/text_btnTrocar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

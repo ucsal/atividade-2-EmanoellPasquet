@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
-    private Button btn;
+    private Button btnTrocar;
     private String user = "";
 
     @Override
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView=findViewById(R.id.textView);
-        btn=findViewById(R.id.btnChange);
+        btnTrocar=findViewById(R.id.btnTrocar);
     }
 
     @Override
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
     }
 
-    public void changeUser(View v){
-        Intent intent=new Intent(this,AnotherActivity.class);
+    public void trocarUsuario(View view){
+        Intent intent = new Intent(MainActivity.this, OutraActivity.class);
         intent.putExtra("USER", user);
         startActivityForResult(intent, 200);
     }
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         if(data.hasExtra("USER")){
             if(data.getStringExtra("USER").trim().isEmpty()){
                 user="";
-                textView.setText("Hello!");
+                textView.setText("Oi!");
             }else{
                 user=data.getStringExtra("USER");
-                textView.setText("Hello "+user+"!");
+                textView.setText("Oi "+user+"!");
             }
         }
     }
