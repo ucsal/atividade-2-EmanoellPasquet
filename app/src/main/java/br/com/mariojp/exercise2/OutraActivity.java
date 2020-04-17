@@ -11,7 +11,7 @@ public class OutraActivity extends AppCompatActivity {
     private EditText editText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_outra);
         editText = findViewById(R.id.editText);
